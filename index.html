@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>吃啥!</title>
+    <meta name="description" content="Quick decision for what to eat.">
+    <meta name="author" content="Jiachen Sun">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        #header {
+            font-size: 1.2em;
+        }
+        #roulette {
+            color: red;
+            height: 210px;
+            padding-top: 40px;
+            font-size: 1.5em;
+        }
+        .wrapper {
+            text-align: center;
+        }
+        #change-button {
+            width: 50%;
+            max-width: 400px;
+            margin-left: 25%;
+            border-radius: 10px;
+            border: 1px solid black;
+            background-color: #78b0ff;
+            text-align: center;
+            font-size: 2em;
+        }
+        #change-button:hover {
+            cursor: pointer;
+            background-color: #9fd1ff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="header">
+        <h1 align="center">吃啥?</h1>
+    </div>
+
+    <div class="container" id="roulette-div">
+        <div id="roulette"></div>
+        <div class="wrapper">
+            <div id="change-button" class="button">
+                换一家
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(function () {
+            var places = ["绿屋", "日本超市", "Piada", "麦当劳", "KFC", "Wendy's", "Moe's", "Oxley", "餐车", "Hongkong House", "Buckeye Pho", "丘记"];
+            function roulette() {
+                var choice = Math.floor((places.length - 1) * Math.random());
+                $("#roulette").html("<h1 align=\'center\'>" + places[choice] + "</h1>");
+            }
+            roulette();
+            $("#change-button").click(function() {
+                roulette();
+            });
+        });
+    </script>
+</body>
+
+
+
+</html>
