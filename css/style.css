@@ -1,0 +1,59 @@
+#header {
+    font-size: 2.4em;
+    text-align: center;
+}
+#roulette {
+    height: 210px;
+    width: 100%;
+    padding-top: 40px;
+    color: red;
+    font-size: 1.5em;
+}
+.wrapper {
+    text-align: center;
+}
+
+#price-bar {
+    width: 80%;
+    max-width: 400px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.price-button {
+    width: 49%;
+    height: 38px;
+    max-width: 200px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2em;
+    background-color: lightgrey;
+}
+
+.selected {
+    background-color: grey;
+}
+
+#price-cheap {
+    float: left;
+}
+
+#price-medium {
+    float: right;
+}
+
+#change-button {
+    width: 50%;
+    margin: 0 auto;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2em;
+    background-color: #78b0ff;
+}
+#change-button:hover {
+    cursor: pointer;
+    background-color: #9fd1ff;
+}
