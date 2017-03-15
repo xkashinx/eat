@@ -4,20 +4,19 @@ $(function () {
     var placeMedium = ["Moe's", "Hongkong House", "Buckeye Pho", "丘记"];
     var places = placeCheap;
     $(".price-button").click(function() {
-        $(this).toggleClass("selected");
-        if ($(".selected").length === 0) {
-            $(this).toggleClass("selected");
-            return;
-        }
-        places = [];
-        $(".selected").each(function() {
-            if (this.id === "price-cheap") {
+        if (!$(this).hasClass("selected")) {
+            $(".price-button").each(function() {
+                $(this).toggleClass("selected");
+            });
+            places = [];
+            if ($(".selected").id === "price-cheap") {
                 places = places.concat(placeCheap);
             } else {
                 places = places.concat(placeMedium);
             }
-            console.log(this.id);
-        });
+            set.clear();
+        }
+        console.log(this.id);
         console.log(places);
     });
     var set = new Set();
