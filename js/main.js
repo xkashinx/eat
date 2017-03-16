@@ -8,15 +8,14 @@ $(function () {
             $(".price-button").each(function() {
                 $(this).toggleClass("selected");
             });
-            places = [];
-            if ($(".selected").id === "price-cheap") {
-                places = places.concat(placeCheap);
+            console.log($(".selected").id);
+            if ($(".selected").attr("id") === "price-cheap") {
+                places = placeCheap;
             } else {
-                places = places.concat(placeMedium);
+                places = placeMedium;
             }
             set.clear();
         }
-        console.log(this.id);
         console.log(places);
     });
     var set = new Set();
